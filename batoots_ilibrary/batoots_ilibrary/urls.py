@@ -20,6 +20,6 @@ from bookcollections.views import BookListView, BookDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', BookListView.as_view()),
+    path('', BookListView.as_view() ,name='book-home'),
     path('books/<int:pk>', BookDetailView.as_view(), name='book-detail'),
 ]

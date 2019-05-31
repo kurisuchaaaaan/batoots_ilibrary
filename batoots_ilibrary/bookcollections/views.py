@@ -10,12 +10,12 @@ class BookListView(ListView):
     model = Book
 
 class BookDetailView(DetailView):
-    
+    template_name = "book-detail.html"
     model = Book
    
     from django.shortcuts import get_object_or_404
 
     def book_detail_view(request, primary_key):
         book = get_object_or_404(Book, pk=primary_key)
-        return render(request, 'templates/book-detail.html', context={'book': book})
+        return render(request, '/templates/book-detail.html', context={'book': book})
     
