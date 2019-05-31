@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-2">
 
 <h1 class="mt-5">Book List</h1>
 <ul>
@@ -14,12 +14,7 @@
             style="height:250px ; width:250px">
         <div class="card-body">
             <h4 class="card-title">{{ object.title }}</h4>
-            <p class="card-text">
-            Some quick example text to build on the card title
-            and make up the bulk of the card's content.
-            </p>
             <a href="{% url 'book-detail' object.pk %}" class="btn btn-primary">More Details</a>
-
             </div>
         </div>
         
