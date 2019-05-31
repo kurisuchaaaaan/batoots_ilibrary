@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mt-5">All Dogs</h1>
+{% comment %} 
+<ul>
+    
+{% for object in object_list %}
+    <li>{{ object }}</li>
+{% endfor %}
+
+</ul> 
+{% endcomment %}
+<div class="card-deck">
+{% for object in object_list %}
+ 
+<div class="card">
+  <img class="card-img-top" style="max-width: 300px"
+    src="https://www.adnu.edu.ph/wp-content/uploads/2014/03/AdNU-Seal.png" alt="{{object}}">
+  <div class="card-body">
+    <strong>{{ object.breed }}</strong> 
+    <p>Color: {{ object.get_color_display }}</p>
+    <p>Birth Date: {{ object.birth_date }}</p>
+    <p>Unique Features: {{ object.unique_features  }}</p>
+  </div>
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}
+
+
