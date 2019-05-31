@@ -12,7 +12,8 @@ class Book(models.Model):
     title = models.CharField("Title", max_length=250)
     author = models.CharField("Author", max_length=250)
     publisher = models.CharField("Publisher", max_length=250)
-    publication = models.PositiveIntegerField
-    isbn = models.CharField("ISBN", max_length=250, null = True)
-    notes = models.TextField("Notes", max_length = 25
+    publication = models.PositiveIntegerField(default=0)
+    isbn = models.CharField("ISBN", max_length=250, null=True, blank= True)
+    notes = models.TextField("Notes", max_length = 2500, null=True, blank= True)
+
         

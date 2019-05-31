@@ -1,32 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="mt-5">All Dogs</h1>
-{% comment %} 
+
+<h1 class="mt-5">Book List</h1>
 <ul>
-    
-{% for object in object_list %}
-    <li>{{ object }}</li>
-{% endfor %}
+    {% for object in object_list %}
+    <div class="card">
+            <img class="card-img-top" src="https://www.petmd.com/sites/default/files/Acute-Dog-Diarrhea-47066074.jpg" style="height:250px;width:250px"alt="{{object.breed}}">
+            <div class="card-body">
+              <h4 class="card-title">{{object.title}}</h4>
+              <p>Author: {{object.color}}</p>
+              <p>Publisher: {{object.publisher}}</p>
+              <p>Publication: {{object.publication}}</p>
+              <p>ISBN: {{object.isbn}}</p>
+              <p>Notes: {{object.notes}}</p>
+            </div>
+          </div>
 
-</ul> 
-{% endcomment %}
-<div class="card-deck">
-{% for object in object_list %}
- 
-<div class="card">
-  <img class="card-img-top" style="max-width: 300px"
-    src="https://www.adnu.edu.ph/wp-content/uploads/2014/03/AdNU-Seal.png" alt="{{object}}">
-  <div class="card-body">
-    <strong>{{ object.breed }}</strong> 
-    <p>Color: {{ object.get_color_display }}</p>
-    <p>Birth Date: {{ object.birth_date }}</p>
-    <p>Unique Features: {{ object.unique_features  }}</p>
-  </div>
-</div>
-{% endfor %}
-
-</div>
+    <div class="card">
+        
+    </div>
+    {% endfor %}
+</ul>
+   
 {% endblock %}
-
-

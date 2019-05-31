@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from animals.views import HomePageView, DogListView
+from bookcollections.views import BookListView, BookDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomePageView.as_view()),
-    path('books/', BookListView.as_view()),
+    path('', BookListView.as_view()),
+]

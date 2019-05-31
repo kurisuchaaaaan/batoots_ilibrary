@@ -25,7 +25,7 @@ SECRET_KEY = 'fuqo!=w68nbt2@b(eb^+ar3*5_nu8-tn)v9k#x=ndxgy1)lp6m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'batoots_ilibrary.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
