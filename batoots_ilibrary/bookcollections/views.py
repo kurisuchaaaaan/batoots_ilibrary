@@ -12,7 +12,10 @@ class BookListView(ListView):
 class BookDetailView(DetailView):
     
     model = Book
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['now'] = timezone.now()
-        return context
+   
+    from django.shortcuts import get_object_or_404
+
+    def book_detail_view(request, primary_key):
+        book = get_object_or_404(Book, pk=primary_key)
+        return render(request, 'templates/book_detail.html', context={'book': book})
+    
