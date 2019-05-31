@@ -17,5 +17,5 @@ class BookDetailView(DetailView):
 
     def book_detail_view(request, primary_key):
         book = get_object_or_404(Book, pk=primary_key)
-        return render(request, 'templates/book_detail.html', context={'book': book})
+        return render(request, 'templates/book-detail.html', context={'book': book})
     
